@@ -6,9 +6,25 @@ for i in a: #here I have taken a for loop in which i eill check 'i' in string 'a
     else: # here I have use a else  condition if this condition satisfies the it means there is no same letter then it will add a new elment to the dictionary
         Dict [i]=1 #it is a new elment added to the dictionary
     print(Dict)
-a={'b':1,'a':3,'n':2}
+# a={'b':1,'a':3,'n':2}
 list=[]
-for i in a:
-    print(i,a[i])
-    list.append(i*a[i])
+for i in Dict:
+    print(i,Dict[i])
+    list.append(i*Dict[i])
 print(list)
+
+list=[]
+for i in Dict:
+    print(i,Dict[i])
+print(list)
+# list=["b",'aaa','nn']
+for i in range (len(list)):
+    mvi=i
+    for j in range(i+1,len(list)):
+        if len(list[mvi])>=len(list[j]):
+            mvi=j
+    store=list[mvi]
+    list[mvi]=list[i]
+    list[i]=store
+    print("Sorted List:",list)
+    
